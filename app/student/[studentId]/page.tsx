@@ -106,7 +106,6 @@ export default function StudentDashboard() {
               'from-cyan-500 to-cyan-600',
             ];
             const colorClass = colors[index % colors.length];
-            const shadowClass = `shadow-${colorClass.split('-')[1]}-500/20`;
 
             return (
               <div 

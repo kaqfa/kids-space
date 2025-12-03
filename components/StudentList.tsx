@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { collection, query, where, getDocs, addDoc, deleteDoc, doc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { useAuth } from '@/contexts/AuthContext';
-import { Trash2, Plus, User as UserIcon, ChevronRight, GraduationCap } from 'lucide-react';
+import { Plus, Trash2, GraduationCap, ChevronRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 interface Student {

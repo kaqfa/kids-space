@@ -65,7 +65,7 @@ export default function QuestionForm({ initialData, isOpen, onClose, onSubmit }:
     }
   }, [initialData, isOpen]);
 
-  const handleChange = (field: keyof Omit<Question, 'id'>, value: any) => {
+  const handleChange = (field: keyof Omit<Question, 'id'>, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 

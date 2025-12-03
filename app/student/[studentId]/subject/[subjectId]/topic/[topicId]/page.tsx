@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { doc, getDoc, collection, query, where, getDocs, orderBy } from 'firebase/firestore';
+import Image from 'next/image';
 import { db } from '@/lib/firebase';
 
 interface Question {
@@ -129,11 +130,12 @@ export default function QuestionPage() {
 
             {/* Image if exists */}
             {currentQuestion.hasImage && currentQuestion.imageUrl && (
-              <div className="mb-8 rounded-2xl overflow-hidden border border-gray-100">
-                <img 
+              <div className="mb-8 rounded-2xl overflow-hidden border border-gray-100 relative h-64 sm:h-96">
+                <Image 
                   src={currentQuestion.imageUrl} 
                   alt="Soal" 
-                  className="w-full h-auto object-contain max-h-64 sm:max-h-96 bg-gray-50" 
+                  fill
+                  className="object-contain bg-gray-50" 
                 />
               </div>
             )}
